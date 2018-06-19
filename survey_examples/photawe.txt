@@ -1,0 +1,82 @@
+﻿+id photawe0
+
++image_uri pack://application:,,,/Resources/img/logo-notext.png
+
++hi_existing_user Hi %, Thank you for helping us Improve.\r\nLets Get Started!
++hi_new_user Hi There, Lets get to know each other.\r\nI'm an Awesome Viewer. And You Are?
+
++in_it_for_you 9 months FREE of our [ULTIMATE Subscription](http://phot-awe.com/buy), valued at $45
++in_it_for_you2 (3m for Subscribing + 6m for taking our Survey)
+
++share_it_offer An additional 6 months FREE of our [ULTIMATE Subscription](http://phot-awe.com), valued at another $30
++share_twitter_link https://twitter.com/intent/tweet?url=https://phot-awe.com/&text=Your%20Photos%20Are%20Awesome.%20Try%20This%20Awesome%20Viewer!%20%23photawe%20%23awesome%20%23photography%20http://phot-awe.com
++share_facebook_link http://www.facebook.com/sharer/sharer.php?s=100&p[url]=https://phot-awe.com/&p[images][0]=https://phot-awe.com/logo400.png&p[title]=Your%20Photos%20Are%20Awesome.%20Try%20This%20Awesome%20Viewer
+
+Startup Experience/Initial Screen - Is it a pleasant experience?
+Yes/No
++extra Once the app starts, we search you PC for Photos. This step should take roughly 1-3 minutes, even if you have 20-50K Photos. We'll then show you the World Map, and the load meta-data from each of your Photos (such as Width x Height, GPS Location, and so on). This step may take around 10-15 minutes for lots of Photos.
+/Yes Awesome, glad to hear :)
+/No Ouch, what went wrong? And more importantly, how could we Improve?
+
+
+World Map/Showing Your Photos Together with Locations - Enjoyable?
+Yes/No
++extra Once the previous step completes, the World Map will reload showing you locations where you have taken Photos. You can click a location to view more detailed info. Is this friendly enough?
+/Yes Cool! Anything you like in particular? :)
+/No Ouch, what was wrong?
+
+
+Viewing Your Awesome Photos/Do You Like the Main Photo/Surrounding Photos concept?
+Yes, Very Much/Yes, It's kinda' Cool/No, Not Really/No, It's really Bad
++extra If open, you can close the World Map now. You'll now see all the Photos we've found: on the top-left, there's the Main Photo surrounding by other Photos. Play around a bit - you can also use the arrows hotkeys. At this point, we've started optimizing the Photos - while doing this, things will be a bit slower...
+/Yes, Very Much Awesome, glad to hear :)
+/Yes Awesome, glad to hear :)
+/No, Not Really Ouch, what could we do to improve?
+/No, It's really Bad Ouch, What do you hate most? Any suggestion on how we could Improve?
+
+
+Toolbar/Toolbar Experience - Is it Straightforward enough?
+Yes/No
++extra Anything from the Toolbar should have an instant visible effect, which should be clear to you after you press any of the buttons. Is anything not clear enough or not behaving as it should?
+/Yes Awesome, glad to hear :)
+/No Ouch, which one(s)?
+
+
+Timeline View/Play with it - Is everything straightforward?
+Yes/No
++extra Timeline View (second Toolbar button) is meant to show you the periods where you've taken Photos, across time (from the fist photo you took, until now). We've grouped them into date ranges which you can expand down to the day.
+/Yes Awesome, glad to hear :)
+/No Ouch, what's not clear?
+
+
+Folder View/Play with it - Is everything straightforward?
+Yes/No
++extra Folder View (first Toolbar button). This shows all of the folders where we've found Photos. You can click on a folder to view all the Photos from that folder and its subfolders. Does this work as expected? Is it simple enough?
+/Yes Awesome, glad to hear :)
+/No Ouch, what's not clear?
+
+
+Sync/Synchronizing with Phones/Tabless/USB Sticks/Cameras/SD Cards - Wanna Try?
+Yes/No
++extra While Phot-Awe is running, we can sync your Photos from an external drive. Just plug it in, wait 1-2 seconds, and a message box should appear. If you click "Yes", we'll automatically copy all the Photos we find. You can then unplug it - if you make more photos (for instance, you make more photos with your Phone), and plug it in again, we should copy only the new ones. The newly copied photos will be available under My Devices in Folder View.
+/Yes Awesome, glad to hear :)
+/No Ouch, what's not working?
+
+
+Effects/Do you like the Effects View?
+Yes/No
++extra Click on Effects button, and apply effects to the Photos. By default, the effect will be previewed on all the page. You can apply several effects at once, and click "Save", "Save Copy", or "Temporary Copy". Once you've applied the effect, the resulting photo will be shown after the photo you applied the effect on. Is this simple enough? Does the whole process feel seamless?
+/Yes Awesome, glad to hear :)
+/No Ouch, what's not working? How can we Improve?
+
+
+Your Testing Experience/How was your experience?
+Awesome/Cool/Acceptable/Bad
++extra We'd like you to enjoy testing our app. If this is not the case, please help us Improve!
++no_skip
+
+Rate Us/Do you Like our App?
+Awesome/Cool/Acceptable/Bad
++extra How does the whole application feel? Would you buy it? Do you feel like it's missing something, or a feature is not developed enough? Are there any bugs that should be fixed right away?
++no_skip
+
