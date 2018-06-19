@@ -101,5 +101,10 @@
     </None>
     <None Include="README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="survey_examples\photawe.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
