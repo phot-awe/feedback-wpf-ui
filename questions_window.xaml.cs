@@ -210,14 +210,15 @@ namespace feedback_ui
         {
             model().can_start = true;
             model().complete.shared_on_fb = true;
+            model().show_do_not_share_offer = false;
             Process.Start(new ProcessStartInfo(model().facebook_link));
-
         }
 
         private void share_twitter_click(object sender,RoutedEventArgs e)
         {
             model().can_start = true;
             model().complete.shared_on_twitter = true;
+            model().show_do_not_share_offer = false;
             Process.Start(new ProcessStartInfo(model().twitter_link));
 
         }

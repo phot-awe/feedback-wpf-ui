@@ -127,7 +127,7 @@
                            VerticalAlignment="Center" Cursor="Hand" PreviewMouseDown="on_mouse_down_share_text" />
                 <TextBlock Text="{Binding share_suffix}" Margin="5 0" />
             </StackPanel>
-            <TextBlock Text="{Binding share2}" Margin="15 0" TextElement.FontSize="16" TextElement.FontWeight="Bold" />
+            <TextBlock Text="{Binding share2}" Margin="15 0" HorizontalAlignment="Center" TextElement.FontSize="16" TextElement.FontWeight="Bold" />
 
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -150,7 +150,14 @@
 
             </StackPanel>
             <TextBlock Margin="20 10" Cursor="Hand" Text="{Binding do_not_share_offer}" FontSize="16" HorizontalAlignment="Center"
-                       PreviewMouseDown="on_do_not_share_click"/>
+                       PreviewMouseDown="on_do_not_share_click" Visibility="{c:Binding show_do_not_share_offer}"/>
+            
+            <StackPanel Orientation="Horizontal" Visibility="{c:Binding '!show_do_not_share_offer'}" HorizontalAlignment="Center"
+                        >
+                <TextBlock Text="Thank You!" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+                <materialDesign:PackIcon Margin="5"  Kind="CheckAll" Width="24" Height="24" />
+            </StackPanel>
+            
         </StackPanel>
 
         <Button Padding="4 4" 

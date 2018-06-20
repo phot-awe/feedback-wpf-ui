@@ -65,6 +65,7 @@ namespace feedback_ui
         private string share_link_;
         private string share2_;
         private string friendly_user_name_;
+        private bool show_do_not_share_offer_ = true;
 
         public Uri survey_type_uri {
             get { return survey_type_uri_; }
@@ -589,6 +590,16 @@ namespace feedback_ui
                 if (value == do_not_share_offer_)
                     return;
                 do_not_share_offer_ = value;
+                on_property_changed();
+            }
+        }
+
+        public bool show_do_not_share_offer {
+            get { return show_do_not_share_offer_; }
+            set {
+                if (value == show_do_not_share_offer_)
+                    return;
+                show_do_not_share_offer_ = value;
                 on_property_changed();
             }
         }
