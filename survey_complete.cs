@@ -86,5 +86,20 @@ namespace feedback_ui
 
             return msg;
         }
+
+        // the idea is -> the user should not know about the measured times and such
+        public string friendly_msg_to_reply_to() {
+            var msg = "";
+            msg += (user_name != "" ? user_name : user_email) + ", Thank You for Your Feedback!\r\n\r\n";
+            var answers = this.answers;
+            for (var i = 0; i < answers.Count; i++) {
+                var a = answers[i];
+                var q = survey.questions[i];
+                msg += (i + 1) + ": " + q.msg + "\r\n" + (a.Item1 != "" ? a.Item1 : "(skipped)") + (a.Item2 != "" ? "\r\n" + a.Item2 : "");
+                msg += "\r\n\r\n";
+            }
+
+            return msg;
+        }
     }
 }
