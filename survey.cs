@@ -110,8 +110,15 @@ namespace feedback_ui
                             s.do_not_share_it_offer = suffix;
                             break;
                         case "+extra":
-                            Debug.Assert(last_line_was_options);
-                            s.questions_.Last().extra_info = suffix;
+                            // note: we now allow questions with no answers - it's basically in-between explanations
+                            var last = s.questions.Last();
+                            last.extra_info = suffix;
+                            if (last.options.Count == 0) {
+                                last.options.Add(new question.option { msg = "Next", show_more_text = false} );
+                                last.allow_skip = false;
+                                // ... ignore the ending '?' - it's not a question
+                                last.msg = last.msg.Substring(0, last.msg.Length - 1);
+                            }
                             break;
                         default:
                             logger.Error("invalid survey line " + l);

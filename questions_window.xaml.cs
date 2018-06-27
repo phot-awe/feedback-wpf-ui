@@ -21,7 +21,7 @@ namespace feedback_ui
     /// <summary>
     /// Interaction logic for questions_window.xaml
     /// </summary>
-    public partial class questions_window:Window
+    public partial class questions_window : Window
     {
         private DispatcherTimer go_next_timer_ = new DispatcherTimer();
 
@@ -149,8 +149,9 @@ namespace feedback_ui
             util.postpone(Close, 2000);
         }
 
-        private void on_closed(object sender,EventArgs e)
-        {
+        private void on_closed(object sender,EventArgs e) {
+            go_next_timer_.IsEnabled = false;
+
             // if not thank you, user aborted
             if (model().thank_you) {
                 model().complete.user_email = model().user_email;

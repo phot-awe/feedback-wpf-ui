@@ -17,6 +17,7 @@
         Topmost="True"
         Opacity="{c:Binding '!is_minimized ? 1 : 0.6'}"
         MouseEnter="on_mouse_enter" MouseLeave="on_mouse_leave"
+        materialDesign:ShadowAssist.CacheMode="{x:Null}"        
         >
     <Window.DataContext>
         <local:questions_view_model />
@@ -230,7 +231,7 @@
         </StackPanel>
 
         <!-- Options Text -->
-        <TextBlock Grid.Row="1" Grid.Column="2"  Margin="0 10"
+        <TextBlock Grid.Row="1" Grid.Column="2"  Margin="0 10 5 10"
                    Visibility="{c:Binding is_asking_questions}"
                    TextWrapping="Wrap" FontSize="14" Text="{Binding question_extra}"
                    />
