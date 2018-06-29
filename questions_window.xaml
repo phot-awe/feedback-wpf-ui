@@ -17,8 +17,24 @@
         Topmost="True"
         Opacity="{c:Binding '!is_minimized ? 1 : 0.6'}"
         MouseEnter="on_mouse_enter" MouseLeave="on_mouse_leave"
-        materialDesign:ShadowAssist.CacheMode="{x:Null}"        
+        materialDesign:ShadowAssist.CacheMode="{x:Null}"       
+        
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Normal"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"  
         >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Window.Resources>
     <Window.DataContext>
         <local:questions_view_model />
     </Window.DataContext>
@@ -35,6 +51,8 @@
             <RowDefinition Height="90" />
             <RowDefinition Height="60" />
         </Grid.RowDefinitions>
+        
+        <Border BorderThickness="1" BorderBrush="WhiteSmoke" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="3" />
 
         <!-- Feedback main button -->
 
@@ -105,7 +123,7 @@
                 Grid.Row="3" Grid.Column="2" IsEnabled="{Binding can_go_to_share_page}"
             >
             <StackPanel Orientation="Horizontal" >
-                <TextBlock Text="Next" Margin="5 0"></TextBlock>
+                <TextBlock Text="Next" Margin="5 0" VerticalAlignment="Center"/>
                 <materialDesign:PackIcon Kind="Check" Width="24" Height="24" />
             </StackPanel>
         </Button>
@@ -170,7 +188,7 @@
                 Grid.Row="3" Grid.Column="2" IsEnabled="{Binding can_start}"
         >
             <StackPanel Orientation="Horizontal" >
-                <TextBlock Text="Start Test" Margin="5 0"></TextBlock>
+                <TextBlock Text="Start Test" Margin="5 0" VerticalAlignment="Center"/>
                 <materialDesign:PackIcon Kind="Check" Width="24" Height="24" />
             </StackPanel>
         </Button>
@@ -196,7 +214,7 @@
                          Visibility="{c:Binding 'option_count >= 1'}"
                          Cursor="Hand"
                          FontSize="16" FontWeight="Bold" VerticalContentAlignment="Center"
-                         Click="on_radio_click"
+                         Click="on_radio_click" 
                          Margin="5"/>
             <RadioButton Content="{Binding option1}" IsChecked="{Binding is_option1_checked}" 
                          Visibility="{c:Binding 'option_count >= 2'}"

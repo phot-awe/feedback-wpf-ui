@@ -74,7 +74,7 @@ namespace feedback_ui
             for (var i = 0; i < answers.Count; i++) {
                 var a = answers[i];
                 var q = survey.questions[i];
-                msg += (i + 1) + ": " + q.msg + "\r\n" + (a.Item1 != "" ? a.Item1 : "(skipped)") + (a.Item2 != "" ? "\r\n" + a.Item2 : "");
+                msg += (i + 1) + ": " + q.title + "/" + q.msg + "\r\n" + (a.Item1 != "" ? a.Item1 : "(skipped)") + (a.Item2 != "" ? "\r\n" + a.Item2 : "");
                 msg += "\r\n(answered: " + a.Item3 + "ms)";
                 msg += "\r\n\r\n";
             }
@@ -95,7 +95,7 @@ namespace feedback_ui
             for (var i = 0; i < answers.Count; i++) {
                 var a = answers[i];
                 var q = survey.questions[i];
-                msg += (i + 1) + ": " + q.msg + "\r\n" + (a.Item1 != "" ? a.Item1 : "(skipped)") + (a.Item2 != "" ? "\r\n" + a.Item2 : "");
+                msg += (i + 1) + ": " + q.title + "/" + q.msg + "\r\n" + (a.Item1 != "" ? a.Item1 : "(skipped)") + (a.Item2 != "" ? "\r\n" + a.Item2 : "");
                 msg += "\r\n\r\n";
             }
 
