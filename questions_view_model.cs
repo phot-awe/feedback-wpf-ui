@@ -66,6 +66,7 @@ namespace feedback_ui
         private string share2_;
         private string friendly_user_name_;
         private bool show_do_not_share_offer_ = true;
+        private string reddit_link_;
 
         public Uri survey_type_uri {
             get { return survey_type_uri_; }
@@ -614,6 +615,16 @@ namespace feedback_ui
             }
         }
 
+        public string reddit_link {
+            get { return reddit_link_; }
+            set {
+                if (value == reddit_link_)
+                    return;
+                reddit_link_ = value;
+                on_property_changed();
+            }
+        }
+
         public string facebook_link {
             get { return facebook_link_; }
             set {
@@ -650,6 +661,7 @@ namespace feedback_ui
             survey_type_uri = survey_.survey_type_uri;
             twitter_link = survey.share_twitter_link;
             facebook_link = survey.share_facebook_link;
+            reddit_link = survey.share_reddit_link;
             set_our_thank_you();
             set_share();
         }

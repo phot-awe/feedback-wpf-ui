@@ -51,6 +51,9 @@ namespace feedback_ui
         // where to go when user presses share on fb
         public string share_facebook_link { get; set; } = "";
 
+        // where to go when user presses share on reddit
+        public string share_reddit_link { get; set; } = "";
+
         public static survey from_file(string file) {
             try {
                 var lines = File.ReadAllLines(file);
@@ -103,6 +106,11 @@ namespace feedback_ui
                         case "+share_facebook_link":
                             s.share_facebook_link = suffix;
                             break;
+
+                        case "+share_reddit_link":
+                            s.share_reddit_link = suffix;
+                            break;
+
                         case "+no_skip":
                             s.questions_.Last().allow_skip = false;
                             break;

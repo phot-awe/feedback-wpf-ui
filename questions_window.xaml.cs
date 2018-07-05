@@ -221,7 +221,14 @@ namespace feedback_ui
             model().complete.shared_on_twitter = true;
             model().show_do_not_share_offer = false;
             Process.Start(new ProcessStartInfo(model().twitter_link));
+        }
 
+        private void share_reddit_click(object sender,RoutedEventArgs e)
+        {
+            model().can_start = true;
+            model().complete.shared_on_reddit = true;
+            model().show_do_not_share_offer = false;
+            Process.Start(new ProcessStartInfo(model().reddit_link));
         }
 
         private void on_mouse_down_share_text(object sender,MouseButtonEventArgs e)
@@ -229,5 +236,6 @@ namespace feedback_ui
             Process.Start(new ProcessStartInfo(model().share_link));
             e.Handled = true;
         }
+
     }
 }

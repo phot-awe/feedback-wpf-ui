@@ -12,6 +12,7 @@ namespace feedback_ui
 
         public bool shared_on_twitter = false;
         public bool shared_on_fb = false;
+        public bool shared_on_reddit = false;
 
         private survey survey_ = null;
 
@@ -81,6 +82,7 @@ namespace feedback_ui
 
             msg += "Shared on Twitter: " + (shared_on_twitter ? "YES" : "-") + "\r\n";
             msg += "Shared on Facebook: " + (shared_on_fb ? "YES" : "-") + "\r\n";
+            msg += "Shared on Reddit: " + (shared_on_reddit ? "YES" : "-") + "\r\n";
 
             msg += "\r\nTotal time:" + (int)(DateTime.Now - survey_start).TotalSeconds + "secs";
 

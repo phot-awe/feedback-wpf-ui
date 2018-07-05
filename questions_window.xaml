@@ -167,6 +167,14 @@
                     <materialDesign:PackIcon Kind="Facebook" Width="48" Height="48" />
                 </Button>
 
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Padding="4 4" 
+                        VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20"
+                        ToolTip="Share With Your Reddit Friends" Click="share_reddit_click" 
+                        Cursor="Hand" Width="70" Height="70"
+                >
+                    <materialDesign:PackIcon Kind="Reddit" Width="48" Height="48" />
+                </Button>
+
             </StackPanel>
             <TextBlock Margin="20 10" Cursor="Hand" Text="{Binding do_not_share_offer}" FontSize="16" HorizontalAlignment="Center"
                        PreviewMouseDown="on_do_not_share_click" Visibility="{c:Binding show_do_not_share_offer}"/>
