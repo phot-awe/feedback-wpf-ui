@@ -146,7 +146,7 @@ namespace feedback_ui
 
         private void go_complete(object sender,RoutedEventArgs e) {
             model().thank_you = true;
-            util.postpone(Close, 2000);
+            feedback_util.postpone(Close, 2000);
         }
 
         private void on_closed(object sender,EventArgs e) {

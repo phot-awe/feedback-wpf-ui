@@ -7,7 +7,7 @@ using System.Windows.Threading;
 
 namespace feedback_ui
 {
-    class util
+    class feedback_util
     {
         public static void postpone( Action a, int milliseconds) {
             DispatcherTimer timer = new DispatcherTimer();

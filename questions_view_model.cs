@@ -86,7 +86,7 @@ namespace feedback_ui
                     return;
                 user_email_ = value;
                 on_property_changed();
-                can_go_to_share_page = util.is_email_valid(user_email_);
+                can_go_to_share_page = feedback_util.is_email_valid(user_email_);
                 update_friendly_user_name();
             }
         }

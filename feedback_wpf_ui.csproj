@@ -65,7 +65,7 @@
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="survey.cs" />
     <Compile Include="survey_complete.cs" />
-    <Compile Include="util.cs" />
+    <Compile Include="feedback_util.cs" />
     <Page Include="questions_window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -102,9 +102,7 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="survey_examples\photawe.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="survey_examples\photawe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
