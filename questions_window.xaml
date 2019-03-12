@@ -14,10 +14,8 @@
         Loaded="on_load"
         Height="370" Width="800" ResizeMode="NoResize"
         AllowsTransparency="True"
-        Topmost="True"
         Opacity="{c:Binding '!is_minimized ? 1 : 0.6'}"
         MouseEnter="on_mouse_enter" MouseLeave="on_mouse_leave"
-        materialDesign:ShadowAssist.CacheMode="{x:Null}"       
         
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Normal"
@@ -26,6 +24,7 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"  
         >
+
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -33,8 +32,8 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-
     </Window.Resources>
+
     <Window.DataContext>
         <local:questions_view_model />
     </Window.DataContext>
@@ -44,14 +43,14 @@
             <ColumnDefinition Width="1.2*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="70" />
             <RowDefinition Height="140" />
             <RowDefinition Height="90" />
             <RowDefinition Height="60" />
         </Grid.RowDefinitions>
-        
+
         <Border BorderThickness="1" BorderBrush="WhiteSmoke" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="3" />
 
         <!-- Feedback main button -->
@@ -69,11 +68,11 @@
 
         <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Padding="4 4" 
                 VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10 10"
-                ToolTip="Help Us Improve!" Click="toggle_show" MouseEnter="on_clickme_enter" MouseLeave="on_clickme_leave"
+                ToolTip="Help Us Improve!" Click="toggle_show" MouseEnter="on_clickme_enter" MouseLeave="on_clickme_leave" PreviewMouseLeftButtonDown="ignore_click"
                 Cursor="Hand"
                 Visibility="{c:Binding '!is_minimized'}"
                 Grid.Row="3"
-                Grid.Column="0"
+                Grid.Column="0" 
         >
             <materialDesign:PackIcon Kind="MessageTextOutline" Width="24" Height="24" />
         </Button>
@@ -81,8 +80,9 @@
 
 
         <!-- the "Hi" page -->
-        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="2" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center"
-                    Visibility="{c:Binding is_on_saying_hi_page}"
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="2" 
+                    Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Visibility="{c:Binding is_on_saying_hi_page}" 
         >
             <StackPanel Orientation="Horizontal">
                 <Image Width="48" Height="48" Stretch="Uniform" Source="{Binding survey_type_uri}" Margin="10"/>
@@ -98,7 +98,8 @@
                 />
                 <TextBox Margin="0 5" Width="200" materialDesign:HintAssist.Hint="Your Name (Optional)" 
                          Text="{Binding user_name,UpdateSourceTrigger=PropertyChanged}"  FontSize="16" 
-                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         />
             </StackPanel>
 
             <TextBlock Text="Our Thank You for doing this:" Margin="15 15 15 0" 
@@ -158,7 +159,7 @@
                 >
                     <materialDesign:PackIcon Kind="Twitter" Width="48" Height="48" />
                 </Button>
-                
+
                 <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Padding="4 4" 
                         VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20"
                         ToolTip="Share With Your Facebook Friends" Click="share_facebook_click" 
@@ -178,13 +179,13 @@
             </StackPanel>
             <TextBlock Margin="20 10" Cursor="Hand" Text="{Binding do_not_share_offer}" FontSize="16" HorizontalAlignment="Center"
                        PreviewMouseDown="on_do_not_share_click" Visibility="{c:Binding show_do_not_share_offer}"/>
-            
+
             <StackPanel Orientation="Horizontal" Visibility="{c:Binding '!show_do_not_share_offer'}" HorizontalAlignment="Center"
                         >
                 <TextBlock Text="Thank You!" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
                 <materialDesign:PackIcon Margin="5"  Kind="CheckAll" Width="24" Height="24" />
             </StackPanel>
-            
+
         </StackPanel>
 
         <Button Padding="4 4" 
@@ -268,7 +269,7 @@
                 Visibility="{c:Binding is_asking_questions}"
                 BorderThickness="1" BorderBrush="Black" Margin="5" ToolTip="We'd love to know more details ;)"
                 >
-        <TextBox AcceptsReturn="True" 
+            <TextBox AcceptsReturn="True" 
                  VerticalScrollBarVisibility="Visible"
                  HorizontalScrollBarVisibility="Hidden" Margin="5 2"
                  FontSize="18" Height="70" Cursor="IBeam"
@@ -315,7 +316,7 @@
             <TextBlock Margin="10 0" Text="Would You Like To Give Us Some More Info? Start Typing!" VerticalAlignment="Center" />
             <TextBlock Text="{Binding go_next_str}" VerticalAlignment="Center" />
         </StackPanel>
-        
+
         <StackPanel Orientation="Horizontal"
                     Visibility="{c:Binding 'is_asking_questions and (go_next_value == 0)'}"
                     Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
@@ -378,7 +379,7 @@
             >
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Complete" Margin="5 0"></TextBlock>
-                <materialDesign:PackIcon Kind="CheckAll" Width="24" Height="24" />
+                    <materialDesign:PackIcon Kind="CheckAll" Width="24" Height="24" />
                 </StackPanel>
             </Button>
 
@@ -395,5 +396,5 @@
 
 
     </Grid>
-    
+
 </Window>
