@@ -38,6 +38,8 @@ namespace feedback_ui
         // Our "Thank You" for completing this: 
         public string in_it_for_you2 { get; set; } = "";
 
+        public bool skip_social { get; set; } = false;
+
         // if you have a "share on fb/twitter" extra offer
         public string share_it_offer { get; set; } = "";
 
@@ -84,6 +86,9 @@ namespace feedback_ui
                             break;
                         case "+hi_existing_user":
                             s.hi_existing_user = suffix;
+                            break;
+                        case "+skip_social":
+                            s.skip_social = true;
                             break;
                         case "+hi_new_user":
                             s.hi_new_user = suffix;

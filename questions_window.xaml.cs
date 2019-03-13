@@ -169,7 +169,10 @@ namespace feedback_ui
 
         private void go_to_share_page(object sender,RoutedEventArgs e) {
             model.is_on_saying_hi_page = false;
-            model.is_on_share_page = true;
+            if ( !model.survey.skip_social)
+                model.is_on_share_page = true;
+            else 
+                model.is_asking_questions = true;
         }
 
         private void on_load(object sender,RoutedEventArgs e) {

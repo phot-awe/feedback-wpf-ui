@@ -111,7 +111,7 @@
                            VerticalAlignment="Center" Cursor="Hand" PreviewMouseDown="on_mouse_down_thank_you_text" />
                 <TextBlock Text="{Binding our_thank_you_suffix}" Margin="5 0" />
             </StackPanel>
-            <TextBlock Text="{Binding our_thank_you2}" Margin="15 0" TextElement.FontSize="16" TextElement.FontWeight="Bold" />
+            <TextBlock Text="{Binding our_thank_you2}" Margin="20 0" TextElement.FontSize="16" TextElement.FontWeight="Bold" />
             <TextBlock Text="Please Be Brutally Honest. We can take it ;)" Margin="15 15 15 0" TextElement.FontSize="20" TextElement.FontWeight="Bold" />
         </StackPanel>
 
@@ -378,7 +378,7 @@
                     Click="go_complete"
             >
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Complete" Margin="5 0"></TextBlock>
+                    <TextBlock Text="Complete" Margin="5 0" VerticalAlignment="Center"/>
                     <materialDesign:PackIcon Kind="CheckAll" Width="24" Height="24" />
                 </StackPanel>
             </Button>
