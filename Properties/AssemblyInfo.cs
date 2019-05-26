@@ -3,7 +3,7 @@ using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
-
+#if !DOTNET_CORE
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
@@ -45,3 +45,4 @@ using System.Windows;
 // increment this only when modifying the feedback_wpf_ui dll
 [assembly: AssemblyVersion("1.1.5.0")]
 [assembly: AssemblyFileVersion("1.1.5.0")]
+#endif
