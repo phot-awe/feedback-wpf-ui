@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:feedback_ui"
         xmlns:c="clr-namespace:CalcBinding;assembly=CalcBinding"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         WindowStyle="None"
         Title="Phot-Awe Feedback Window" 
@@ -55,7 +55,7 @@
 
         <!-- Feedback main button -->
 
-        <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Padding="4 4" 
+        <Button Padding="4 4" 
                 VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10 10"
                 ToolTip="Help Us Improve!" Click="toggle_show" MouseEnter="on_clickme_enter" MouseLeave="on_clickme_leave"
                 Cursor="Hand"
@@ -63,10 +63,10 @@
                 Grid.Row="0"
                 Grid.Column="0"
         >
-            <materialDesign:PackIcon Kind="MessageTextOutline" Width="24" Height="24" />
+            <iconPacks:PackIconMaterial  Kind="MessageTextOutline" Width="20" Height="20" />
         </Button>
 
-        <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Padding="4 4" 
+        <Button  Padding="4 4" 
                 VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10 10"
                 ToolTip="Help Us Improve!" Click="toggle_show" MouseEnter="on_clickme_enter" MouseLeave="on_clickme_leave" PreviewMouseLeftButtonDown="ignore_click"
                 Cursor="Hand"
@@ -74,7 +74,7 @@
                 Grid.Row="3"
                 Grid.Column="0" 
         >
-            <materialDesign:PackIcon Kind="MessageTextOutline" Width="24" Height="24" />
+            <iconPacks:PackIconMaterial  Kind="MessageTextOutline" Width="20" Height="20" />
         </Button>
 
 
@@ -91,14 +91,16 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Visibility="{c:Binding '!is_existing_user'}" Margin="10">
+                <TextBlock Text="Email" Margin="5 0" VerticalAlignment="Center"/>
                 <TextBox Margin="30 5 10 5" Width="200" 
-                         materialDesign:HintAssist.Hint="Your Email" 
-                         Text="{Binding user_email,UpdateSourceTrigger=PropertyChanged}" x:Name="email" FontSize="16" 
-                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         Text="{Binding user_email,UpdateSourceTrigger=PropertyChanged}" x:Name="email" FontSize="16"
+                         VerticalAlignment="Center"
+                         
                 />
-                <TextBox Margin="0 5" Width="200" materialDesign:HintAssist.Hint="Your Name (Optional)" 
+                <TextBlock Text="Name (Opt)" ToolTip="Name (Optional)" Margin="5 0" VerticalAlignment="Center"/>
+                <TextBox Margin="0 5" Width="200" 
                          Text="{Binding user_name,UpdateSourceTrigger=PropertyChanged}"  FontSize="16" 
-                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         VerticalAlignment="Center"
                          />
             </StackPanel>
 
@@ -125,7 +127,7 @@
             >
             <StackPanel Orientation="Horizontal" >
                 <TextBlock Text="Next" Margin="5 0" VerticalAlignment="Center"/>
-                <materialDesign:PackIcon Kind="Check" Width="24" Height="24" />
+                <iconPacks:PackIconMaterial  Kind="Check" Width="20" Height="20" />
             </StackPanel>
         </Button>
 
@@ -152,28 +154,28 @@
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Padding="4 4" 
+                <Button Padding="4 4" 
                         VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20"
                         ToolTip="Share With Your Twitter Friends" Click="share_twitter_click" 
                         Cursor="Hand" Width="70" Height="70"
                 >
-                    <materialDesign:PackIcon Kind="Twitter" Width="48" Height="48" />
+                    <iconPacks:PackIconMaterial Kind="Twitter" Width="40" Height="40" />
                 </Button>
 
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Padding="4 4" 
+                <Button  Padding="4 4" 
                         VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20"
                         ToolTip="Share With Your Facebook Friends" Click="share_facebook_click" 
                         Cursor="Hand" Width="70" Height="70"
                 >
-                    <materialDesign:PackIcon Kind="Facebook" Width="48" Height="48" />
+                    <iconPacks:PackIconMaterial  Kind="Facebook" Width="40" Height="40" />
                 </Button>
 
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Padding="4 4" 
+                <Button  Padding="4 4" 
                         VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20"
                         ToolTip="Share With Your Reddit Friends" Click="share_reddit_click" 
                         Cursor="Hand" Width="70" Height="70"
                 >
-                    <materialDesign:PackIcon Kind="Reddit" Width="48" Height="48" />
+                    <iconPacks:PackIconMaterial Kind="Reddit" Width="40" Height="40" />
                 </Button>
 
             </StackPanel>
@@ -183,7 +185,7 @@
             <StackPanel Orientation="Horizontal" Visibility="{c:Binding '!show_do_not_share_offer'}" HorizontalAlignment="Center"
                         >
                 <TextBlock Text="Thank You!" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
-                <materialDesign:PackIcon Margin="5"  Kind="CheckAll" Width="24" Height="24" />
+                <iconPacks:PackIconMaterial Margin="5"  Kind="CheckAll" Width="20" Height="20" />
             </StackPanel>
 
         </StackPanel>
@@ -198,7 +200,7 @@
         >
             <StackPanel Orientation="Horizontal" >
                 <TextBlock Text="Start Test" Margin="5 0" VerticalAlignment="Center"/>
-                <materialDesign:PackIcon Kind="Check" Width="24" Height="24" />
+                <iconPacks:PackIconMaterial  Kind="Check" Width="20" Height="20" />
             </StackPanel>
         </Button>
 
@@ -289,7 +291,7 @@
                 Grid.Row="0" Grid.Column="2" 
                 Visibility="{c:Binding '!thank_you'}" 
         >
-            <materialDesign:PackIcon Kind="WindowMinimize" Width="24" Height="24" />
+            <iconPacks:PackIconMaterial  Kind="WindowMinimize" Width="20" Height="20" />
         </Button>
 
         <Button Padding="4 4" 
@@ -301,20 +303,23 @@
                 Grid.Row="0" Grid.Column="2" 
                 Visibility="{c:Binding '!thank_you'}"
         >
-            <materialDesign:PackIcon Kind="Close" Width="24" Height="24" />
+            <iconPacks:PackIconMaterial  Kind="Close" Width="20" Height="20" />
         </Button>
 
         <!-- Buttons -->
-        <StackPanel Orientation="Horizontal"
+        <StackPanel Orientation="Vertical"
                     Visibility="{c:Binding 'is_asking_questions and (go_next_value > 0)'}"
                     Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" TextElement.FontSize="14" TextElement.FontWeight="Bold"
         >
-            <ProgressBar Style="{StaticResource MaterialDesignCircularProgressBar}" 
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10 0" Text="Would You Like To Give Us Some More Info? Start Typing!" VerticalAlignment="Center" />
+                <TextBlock Text="{Binding go_next_str}" VerticalAlignment="Center" />
+            </StackPanel>
+
+            <ProgressBar 
                          Value="35" IsIndeterminate="True"
-                         Width="24" Height="24"
+                         Height="2" HorizontalAlignment="Stretch"
             />
-            <TextBlock Margin="10 0" Text="Would You Like To Give Us Some More Info? Start Typing!" VerticalAlignment="Center" />
-            <TextBlock Text="{Binding go_next_str}" VerticalAlignment="Center" />
         </StackPanel>
 
         <StackPanel Orientation="Horizontal"
@@ -328,7 +333,7 @@
                     VerticalAlignment="Center" 
                     Click="go_first"
             >
-                <materialDesign:PackIcon Kind="PageFirst" Width="24" Height="24" />
+                <iconPacks:PackIconMaterial  Kind="PageFirst" Width="20" Height="20" />
             </Button>
 
             <Button Padding="4 4" 
@@ -338,7 +343,7 @@
                     Cursor="Hand" Width="50"
                     Click="go_prev"
             >
-                <materialDesign:PackIcon Kind="ChevronLeft" Width="24" Height="24" />
+                <iconPacks:PackIconMaterial  Kind="ChevronLeft" Width="20" Height="20" />
             </Button>
 
             <ProgressBar Value="{Binding progress_value}" 
@@ -356,7 +361,7 @@
                     IsEnabled="{c:Binding 'question_index != question_count -1'}"
                     x:Name="next"
             >
-                <materialDesign:PackIcon Kind="ChevronRight" Width="24" Height="24" />
+                <iconPacks:PackIconMaterial  Kind="ChevronRight" Width="20" Height="20" />
             </Button>
             <Button Padding="4 4" 
                     VerticalAlignment="Center" HorizontalAlignment="Left" 
@@ -366,7 +371,7 @@
                     Click="go_last"
                     IsEnabled="{c:Binding 'question_index != question_count -1'}"
             >
-                <materialDesign:PackIcon Kind="PageLast" Width="24" Height="24" />
+                <iconPacks:PackIconMaterial  Kind="PageLast" Width="20" Height="20" />
             </Button>
 
             <Button Padding="4 4" 
@@ -379,7 +384,7 @@
             >
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Complete" Margin="5 0" VerticalAlignment="Center"/>
-                    <materialDesign:PackIcon Kind="CheckAll" Width="24" Height="24" />
+                    <iconPacks:PackIconMaterial  Kind="CheckAll" Width="20" Height="20" />
                 </StackPanel>
             </Button>
 
@@ -391,7 +396,7 @@
                     >
 
             <TextBlock Text="Thank You Very Much!  " VerticalAlignment="Center" FontSize="48" FontWeight="Bold"/>
-            <materialDesign:PackIcon Margin="5"  Kind="CheckAll" Width="48" Height="48" />
+            <iconPacks:PackIconMaterial  Margin="5"  Kind="CheckAll" Width="40" Height="40" />
         </StackPanel>
 
 
